@@ -1,0 +1,19 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav
+    [opened]="!isScreenSmall()"
+    [mode]="isScreenSmall() ? 'over' : 'side'"
+    class="mat-elevation-z10" #sidenav>
+      <mat-toolbar color="accent"><mat-icon>dashboard</mat-icon> Dashboard</mat-toolbar>
+      <mat-list role="list">
+          <mat-list-item role="listitem">Item 1</mat-list-item>
+          <mat-list-item role="listitem">Item 2</mat-list-item>
+          <mat-list-item role="listitem">Item 3</mat-list-item>
+        </mat-list>
+  </mat-sidenav>
+  <div>
+      <app-toolbar (toggleSidenav)="sidenav.toggle()"></app-toolbar>
+      <div class="wrapper">
+        <router-outlet></router-outlet>
+      </div>
+  </div>
+</mat-sidenav-container>
