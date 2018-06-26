@@ -8,12 +8,12 @@ const routes: Routes = [
     component: AppComponent
   },
   {
-    path: 'invoice-builder',
-    loadChildren: './invoice-builder/invoice-builder.module#InvoiceBuilderModule'
+    path: 'dashboard',
+    loadChildren: './dashboard/dashboard.module#DashboardModule'
   },
   {
     path: '**',
-    redirectTo: 'invoice-builder'
+    redirectTo: 'dashboard'
   }
 ];
 
