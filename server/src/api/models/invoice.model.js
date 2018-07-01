@@ -18,10 +18,12 @@ const InvoiceSchema = new Schema({
         required: true
     },
     rate: {
-        type: Number
+        type: Number,
+        required: false
     },
     tax: {
-        type: Number
+        type: Number,
+        required: false
     }
 });
 export default mongoose.model('Invoice', InvoiceSchema);
